@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+
+      body {
+        background: #fff;
+      }
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 10px;
+        background-image: linear-gradient(to left, #a251b9, #ffcaf4);
+        border-bottom: 3px solid rgb(172, 72, 172);
+      }
+      .menu a {
+        margin-left: 20px;
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+        font-weight: bold;
+      }
+        a {
+            color:white;
+            padding: 10px;
+            text-decoration: none;
+        }
+        a:hover {
+            color: rgb(155, 98, 190) ;
+        }
+      .content {
+        display: flex;
+      }
+      .text {
+        margin: 60px;
+        width: 50%;
+      }
+      .judul {
+        text-align: center;
+        color: #a251b9;
+        text-decoration: underline;
+      }
+      .img{
+        margin-left: 40px;
+        max-width: 350px;
+        border-radius: 60px;
+        flex-shrink: 0;
+      }
+    .skill {
+        background: #fff;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 15px;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+        width: 350px;
+      }
+
+  .skill-name {
+    color: #a141e1;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .progress {
+    height: 6px;
+    background: #eee;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  .progress-bar {
+    height: 100%;
+    background: #5d2c87;
+    border-radius: 4px;
+  }
+  .skill-text p{
+    margin-bottom: 5px;
+  }
+  body {
+          background-image: url(img/image.png);
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          color: white;
+        }
+    </style>
+</head>
+<body>
+     <div class="navbar">
+      <div>
+        <h1 style="color: #fff">
+          <span style="color: rgb(138, 112, 159)">W</span>idya
+        </h1>
+      </div>
+      <div class="menu">
+        <a href="home.html" class="active">Home</a>
+        <a href="about.html" class="active">About</a>
+        <a href="skills.html" class="active">Skills</a>
+        <a href="work.html" class="active">Work</a>
+        <a href="contact.html" class="active">Contact</a>
+      </div>
+    </div>
+    <br><br>
+    <div class="judul"><h1>Skills</h1></div>
+    <br><br>
+
+<div style="display: flex; align-items: flex-start;">
+  <div class="textPanjang">
+    <h3>Profesional Skills</h3><br>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque aperiam eligendi soluta temporibus. Pariatur ad nisi quis mollitia veniam quidem totam enim fugiat, sunt placeat ipsam alias soluta incidunt natus.</p>
+    <br>
+    <div class="skill">
+      <div class="skill-name">
+        <span>HTML5</span>
+        <span>95%</span>
+      </div>
+      <div class="progress">
+        <div class="progress-bar" style="width:95%"></div>
+      </div>
+    </div>
+
+    <div class="skill">
+      <div class="skill-name">
+        <span>CSS3</span>
+        <span>85%</span>
+      </div>
+      <div class="progress">
+        <div class="progress-bar" style="width:85%"></div>
+      </div>
+    </div>
+
+    <div class="skill">
+      <div class="skill-name">
+        <span>JAVASCRIPT</span>
+        <span>65%</span>
+      </div>
+      <div class="progress">
+        <div class="progress-bar" style="width:65%"></div>
+      </div>
+    </div>
+
+    <div class="skill">
+      <div class="skill-name">
+        <span>UX/UI</span>
+        <span>85%</span>
+      </div>
+      <div class="progress">
+        <div class="progress-bar" style="width:85%"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="img">
+    <img src="img/gambar.png" width="300" height="390">
+  </div>
+</div>
+</body>
+</html>

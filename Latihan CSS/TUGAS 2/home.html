@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        body {
+            background: #fff;
+        }
+        .navbar{
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 10px;
+            background-image: linear-gradient(to left, #a251b9, #ffcaf4);
+            border-bottom: 3px solid rgb(172, 72, 172);
+        }
+        .menu a{
+            margin-left: 20px;
+            text-decoration: none;
+            color: rgb(255, 255, 255) ;
+            font-weight: bold;
+        }
+        a {
+            color:white;
+            padding: 10px;
+            text-decoration: none;
+        }
+        a:hover {
+            color: rgb(155, 98, 190) ;
+        }
+        .content{
+            display: flex;
+        }
+        .text{
+            margin: 60px;
+            width: 50%;
+            
+        }
+        .gambar{
+            text-align: right;
+            width: 50%;
+            padding-top: 50px;
+        }
+        .nama{
+            color: rgb(197, 112, 216);
+        }
+        .img{
+            border-radius: 60px;
+
+        }
+        body {
+          background-image: url(img/image.png);
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          color: white;
+        }
+    </style>
+</head>
+<body>
+   <div class="navbar">
+    <div><h1 style="color: #fff;"><span style="color: rgb(138, 112, 159);">W</span>idya</h1></div>
+    <div class="menu">
+        <a href="home.html" class="active">Home</a>
+        <a href="about.html" class="active">About</a>
+        <a href="skills.html" class="active">Skills</a>
+        <a href="work.html" class="active">Work</a>
+        <a href="contact.html" class="active">Contact</a>
+    </div>
+   </div>
+   <div class="content">
+    <div class="text">
+        <h1 style="margin-bottom: 10px;">HI,</h1>
+        <h1 style="margin-bottom: 10px;">I'am <span class="nama">Widya</span></h1> 
+        <h1 style="margin-bottom: 10px;">Web Designer</h1>
+        <br>
+        <input type="submit" value="Contact"  style=" padding: 5px; background-color: rgb(226, 172, 240); border: 2px solid rgb(188, 112, 216); border-radius: 5px; color: #fff;">
+        <br>
+        <br>
+        <div style="display:flex">
+        <div><b>in</b></div> &nbsp;&nbsp;
+        <div><b>Bē</b></div> &nbsp;&nbsp;
+        <div><img src="gambar/logo.png" width="20"></div>
+        </div>
+   </div>
+   <div class="gambar">
+     <img src="img/images.png" style="margin-right: 20px" ;width="20" height="350" class="img">
+   </div>
+   </div>
+</body>
+</html>
