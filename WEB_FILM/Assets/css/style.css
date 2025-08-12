@@ -1,0 +1,166 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+main{
+    background-color: #2d2d2d;
+}
+header{
+    background: url(../images/bg/main.jpg);
+    height: 90vh;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    color: aliceblue;
+    flex-direction: column;
+}
+nav{
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.63);
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: fixed;
+}
+header div{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+header div h3{
+    background-color: rgb(129, 20, 20);
+    padding: 5px;
+    border-radius: 10px;
+}
+nav h1{
+    font-weight: bold;
+    border: 2px solid;
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 10px;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+}
+nav ul li{
+    margin: 10px;
+}
+nav ul li a {
+    color: #ffffff;
+}
+nav ul li a:hover {
+    color: tomato;
+    text-decoration: underline;
+}
+.superhero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.superhero .card img {
+    width: 200px;
+}
+.superhero .card{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+.superhero .card a{
+    color: rgb(137, 16, 16);
+    background-color: rgb(67, 27, 27);
+    padding: 5px
+}
+section h1 {
+    text-align: center;
+    text-decoration: underline;
+    color: rgb(148, 29, 29);
+    padding: 10px;
+}
+footer {
+    width: 100%;
+    background-color: rgb(86, 33, 33);
+    color: #9a1818;
+    padding: 10px;
+    text-align: center;
+} 
+section div a{
+    text-decoration: none;
+}
+/* ini pertengahan */
+header div h3{
+    background-color: rgb(129, 20, 20);
+    padding: 5px;
+    border-radius: 10px;
+}
+nav h1{
+    font-weight: bold;
+    border: 2px solid;
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 10px;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+}
+nav ul li{
+    margin: 10px;
+}
+nav ul li a {
+    color: #ffffff;
+}
+nav ul li a:hover {
+    color: tomato;
+    text-decoration: underline;
+}
+.trending{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.trending .card img {
+    width: 200px;
+}
+.trending .card{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    text-align: center;
+    list-style: none;    
+}
+.trending .card a{
+    color: rgb(137, 16, 16);
+    background-color: rgb(67, 27, 27);
+    padding: 5px
+}
+section h1 {
+    text-align: center;
+    text-decoration: underline;
+    color: rgb(148, 29, 29);
+    padding: 10px;
+}
+footer {
+    width: 100%;
+    background-color: rgb(86, 33, 33);
+    color: #9a1818;
+    padding: 10px;
+    text-align: center;
+}
+.text{
+    color: #b13e3e;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* background-color: #7a32328e; */
+}
+input{
+    margin: 10px;
+    background-color: #742222;
+    color: #c52b2b;
+    padding: 5px;
+}
