@@ -156,7 +156,10 @@ footer {
 .text{
     color: #b13e3e;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    /* background-color: #7a32328e; */
+    background-color: #4a39398e;
+    padding: 10px 10px;
+    margin-right: 90px;
+    margin-left: 90px;
 }
 input{
     margin: 10px;
@@ -164,3 +167,43 @@ input{
     color: #c52b2b;
     padding: 5px;
 }
+
+/* background */
+.video-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+/* Kotak video */
+.video-content {
+    position: relative;
+    background: #000;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 800px;
+    width: 90%;
+}
+
+/* Tombol (X) */
+.close {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+video {
+    width: 100%;
+    border-radius: 10px;
+}
+
