@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tokopakedi</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <style>
+      .variant-active {
+        border: 2px solid #198754 !important;
+        background-color: #198754 !important;
+        color: white !important;
+      }
+    </style>
+  </head>
+  <body class="bg-light">
+    <div class="container text-center bg-white">
+      <div class="row">
+        <div class="col-4 d-flex">
+          <img src="assets/img/images/logo.png" width="30" />
+          <h4 class="text-success">tokopakedi</h4>
+        </div>
+        <div class="col-4 d-flex">
+          <h4 class="text-success me-5">Kategori</h4>
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+        </div>
+        <div class="col-4 d-flex">
+          <form class="container-fluid justify-content-start">
+            <button class="btn btn-outline-success me-2" type="button">
+              Masuk
+            </button>
+            <button class="btn btn-success me-2" type="button">Daftar</button>
+          </form>
+        </div>
+      </div>
+</div>
+    <div class="container bg-white p-1 mt-4 shadow-sm">
+      <div class="container">
+        <div class="row">
+          <!-- Gambar -->
+          <div class="col-5">
+            <img
+              src="assets/images/laptop1.jpg"
+              class="border img-fluid"
+              id="mainImage"
+            />
+            <div class="d-flex mt-3">
+              <img
+                src="assets/images/laptop1.jpg"
+                class="m-2 img-thumbnail thumb"
+                width="100"
+              />
+              <img
+                src="assets/images/laptop2.jpg"
+                class="m-2 img-thumbnail thumb"
+                width="100"
+              />
+              <img
+                src="assets/images/laptop3.jpg"
+                class="m-2 img-thumbnail thumb"
+                width="100"
+              />
+            </div>
+          </div>
+
+          <!-- Deskripsi -->
+          <div class="col-4 mt-3">
+            <span class="fw-bold"
+              >Asus Zenbook Pro DUO UX482 Touch i7 1165G7</span
+            >
+            <span class=""><br />Terjual 10 ⭐ 5(4 Rating)</span>
+            <h1 id="hargaDisplay">Rp 14.000.000</h1>
+            <br />
+            <hr />
+            <span class="fw-bold">Pilih Ukuran:</span>
+            <div class="d-flex">
+              <button
+                class="btn btn-success me-2 variant-btn variant-active"
+                data-harga="14000000"
+                data-nama="SSD 512GB, 8GB"
+              >
+                SSD 512GB, 8GB
+              </button>
+              <button
+                class="btn btn-outline-success me-2 variant-btn"
+                data-harga="19000000"
+                data-nama="SSD 1TB, 8GB"
+              >
+                SSD 1TB, 8GB
+              </button>
+            </div>
+            <hr />
+            <p>
+              ASUS ZenBook Duo 14 UX482EA Intel Evo Platform Intel Core
+              i7-1165G7, 14” FHD Touch Display, VGA Intel Iris Xe Graphics,
+              ScreenPad Plus, Windows 11.
+            </p>
+          </div>
+
+          <!-- Pembelian -->
+          <div class="col-3 border border-5 border-dark bg-light rounded-4 p-3">
+            <span class="fw-bold">Atur jumlah:</span><br /><br />
+            <h5 id="varianTitle">SSD 512GB, 8GB</h5>
+            <br />
+            <div class="d-flex justify-content-center align-items-center">
+              <button id="kurang" class="btn btn-outline-secondary">-</button>
+              <input
+                type="number"
+                id="hasil"
+                value="0"
+                class="w-25 text-center mx-2"
+                min="0"
+                max="6"
+              />
+              <button id="tambah" class="btn btn-outline-secondary">+</button>
+            </div>
+            <span>Stok : <span class="text-warning">Sisa 6</span></span>
+            <br />
+            <span>Subtotal : <span id="subtotal" class="text-success">Rp 0</span></span>
+            <br /><br /><hr />
+            <div class="d-flex justify-content-center align-items-center mt-3">
+              <button class="btn btn-outline-success me-2" type="button">Beli Sekarang</button>
+              <button class="btn btn-success" type="button">+Keranjang</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Script -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script>
+      let harga = 14000000; // default SSD 512GB
+      const stok = 6;
+
+      // Fungsi format rupiah
+      function formatRupiah(angka) {
+        return angka.toLocaleString("id-ID", {
+          style: "currency",
+          currency: "IDR",
+        });
+      }
+
+      // Update subtotal
+      function updateSubtotal() {
+        let jumlah = parseInt($("#hasil").val());
+        let subtotal = harga * jumlah;
+        $("#subtotal").text(formatRupiah(subtotal));
+      }
+
+      // Tambah
+      $("#tambah").click(function () {
+        let jumlah = parseInt($("#hasil").val());
+        if (jumlah < stok) {
+          jumlah++;
+          $("#hasil").val(jumlah);
+        }
+        updateSubtotal();
+      });
+
+      // Kurang
+      $("#kurang").click(function () {
+        let jumlah = parseInt($("#hasil").val());
+        if (jumlah > 0) {
+          jumlah--;
+          $("#hasil").val(jumlah);
+        }
+        updateSubtotal();
+      });
+
+      // Input manual
+      $("#hasil").on("input", function () {
+        let jumlah = parseInt($(this).val());
+        if (isNaN(jumlah) || jumlah < 0) jumlah = 0;
+        if (jumlah > stok) jumlah = stok;
+        $(this).val(jumlah);
+        updateSubtotal();
+      });
+
+      // Ganti gambar utama
+      $(".thumb").click(function () {
+        let newSrc = $(this).attr("src");
+        $("#mainImage").attr("src", newSrc);
+      });
+
+      // Ganti varian
+      $(".variant-btn").click(function () {
+        $(".variant-btn").removeClass("variant-active btn-success").addClass("btn-outline-success");
+        $(this).addClass("variant-active btn-success").removeClass("btn-outline-success");
+
+        harga = parseInt($(this).data("harga"));
+        let namaVarian = $(this).data("nama");
+
+        $("#hargaDisplay").text(formatRupiah(harga));
+        $("#varianTitle").text(namaVarian);
+
+        updateSubtotal();
+      });
+    </script>
+  </body>
+</html>
