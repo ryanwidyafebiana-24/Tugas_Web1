@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Dom</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+</head>
+<body>
+
+    <!-- DOM -->
+    <!-- manipulasi isi elemant -->
+     <h1 id="j1"></h1>
+     <h1 id="j2"></h1>
+     <div id="kotak1"></div>
+     <div id="kotak2"></div>
+     <img src="assets/img/image1.png">
+     <!-- <img src="assets/img/image2.png"> -->
+    <!-- manipulasi css -->
+
+    <!-- event harder (funtion dan struktur kendali) -->
+     <button id="clickme" class="btn btn-info">click me</button>
+     <hr>
+     <input type="number" id="hasil" value="0"/><button id="tambah">+</button>
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // ini manipulasi isi Element
+        $('#j1').text("hello");
+        $('#j2').text("word");
+        $('#kotak1').text("kotak1");
+        $('#kotak2').html(`
+        <table border=1>
+            <tr>
+                <td>
+                    kotak2
+                </td>
+            </tr>
+        </table>`);
+        //  ini buat tampilkan text yang mau di modifikasi
+    // ini manupulasi warna text, css
+    // $("#j1").css({color:"blue","backgroud-color":"green"});
+
+    // ini untuk manipulasi gambar
+
+    //  function rubahgambar() {
+    //     $("img").attr("src","assets/img/image2.png")
+    //  }
+    // $("#clickme").click(function () {
+    //      $("img").attr("src","assets/img/image2.png")
+    // })
+        
+    // document.addEventListener("click",function () {
+    //      $("img").attr("src","assets/img/image2.png")
+    // });
+    $("#tambah").click (function (){
+    let hasil =parseInt($("#hasil").val());
+    hasil ++;
+    hasil += 1;
+    $("#hasil").val(hasil);
+
+    });
+    </script>
+    <style>
+        #j1 {
+            color: rgb(223, 182, 227);
+        background-color: rgb(246, 251, 155);
+        }
+        #kotak2 {
+            color: rgb(159, 52, 168);
+        }
+    </style>
+</body>
+</html>
