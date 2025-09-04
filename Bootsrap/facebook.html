@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar form dan table</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <style>
+      body {
+        background-color: #f0f2f5;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="container d-flex justify-content-center align-items-center vh-100"
+    >
+      <div class="row">
+        <div class="col-lg-6 col-md-12 col-ms-12 mb-5">
+          <h1 class="text-primary mt-5 text-center">FaceBook</h1>
+          <b
+            >Facebook helps you connect and share with the people in your
+            life.</b
+          >
+        </div>
+        <div class="col-lg-6 col-md-12 col-ms-12 text-center">
+          <form action="" class="bg-light p-3 rounded-3 shadow-sm">
+            <input
+              type="text"
+              id="username"
+              placeholder="Email address"
+              class="form-control"
+            />
+            <div id="validationServerUsernameFeedback" class="invalid-feedback text-start">
+              Email address tidak boleh kosong
+            </div>
+            <input
+              type="password"
+              id="password"
+              class="form-control mt-2"
+              placeholder="Password"
+            />
+            <div id="password-feedback " class="invalid-feedback text-start">
+              password tidak boleh kosong
+            </div>
+            <button type="submit" class="btn btn-primary p-1 mt-2 w-100">
+              Log In
+            </button>
+            <p class="text-center my-3"><a href="">forgotten password?</a></p>
+            <!-- my buat jarak atas bawah, mx buat kiri kanan -->
+            <hr />
+            <button class="btn btn-success p-2 w-50">
+              <a href="createNewAccount.html" class="text-light"
+                >Create new account</a
+              >
+            </button>
+          </form>
+          <p class="text-center my-3">
+            <a href=""> create a page </a> for a celebrity, brand or business
+          </p>
+        </div>
+      </div>
+    </div>
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      $("form").submit(function (e) {
+        e.preventDefault();
+        let username = $("#username").val();
+        let password = $("#password").val();
+
+        $("#username").removeClass("is-valid is-invalid");
+        $("#validationServerUsernameFeedback")
+          .removeClass("text-success")
+          .addClass("invalid-feedback");
+        if (username === "") {
+          $("#username").addClass("is-invalid");
+          $("#validationServerUsernameFeedback").text(
+            "Email address tidak boleh kosong"
+          );
+        } else if (!username.includes("@gmail.com")) {
+          $("#username").addClass("is-invalid");
+          $("#validationServerUsernameFeedback").text(
+            "Email harus memiliki tanda @gmail.com"
+          );
+        } else {
+          $("#username").addClass("is-valid");
+          $("#validationServerUsernameFeedback")
+            .text("Email benar")
+            .removeClass("invalid-feedback")
+            .addClass("text-success");
+        }
+
+        $("#password").removeClass("is-valid is-invalid");
+        $("#password-feedback")
+          .removeClass("text-success")
+          .addClass("invalid-feedback");
+        if (password === "") {
+          $("#password").addClass("is-invalid");
+          $("#password-feedback").text("Password tidak boleh kosong");
+        } else if (password.length < 8) {
+          $("#password").addClass("is-invalid");
+          $("#password-feedback").text("Password minimal 8 karakter");
+        } else {
+          $("#password").addClass("is-valid");
+          $("#password-feedback")
+            .text("Password benar")
+            .removeClass("invalid-feedback")
+            .addClass("text-success");
+        }
+      });
+    </script>
+  </body>
+</html>
